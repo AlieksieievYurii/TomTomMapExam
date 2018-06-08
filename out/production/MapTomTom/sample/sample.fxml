@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="700" maxWidth="1000" minHeight="700" minWidth="1000" prefHeight="700" prefWidth="1000" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Button fx:id="btnTest" layoutX="811.0" layoutY="661.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="175.0" text="Read JSON" />
+      <ListView fx:id="list_incidence" layoutX="770.0" layoutY="15.0" prefHeight="630.0" prefWidth="216.0" />
+      <Canvas height="659.0" layoutX="14.0" layoutY="14.0" width="754.0" fx:id="map"/>
+   </children>
+</AnchorPane>

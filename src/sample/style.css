@@ -1,0 +1,7 @@
+#pane
+{
+    -fx-background-image: url("map.png");
+    -fx-background-repeat: stretch;
+    -fx-background-size: 700 700;
+    -fx-background-position: top left;
+}
