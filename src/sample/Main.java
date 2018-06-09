@@ -14,13 +14,13 @@ public class Main extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("sample.fxml"));//set FXMLLoader from xml file
 
         Parent root = fxmlLoader.load();
-        root.setId("pane");
         Controller controller = fxmlLoader.getController();
         controller.setStage(primaryStage);
 
         primaryStage.setTitle("Map");
         primaryStage.setResizable(false);
-        Scene scene = new Scene(root, 1000,700);
+
+        Scene scene = new Scene(root, 1250,700);
         primaryStage.setScene(scene);
         primaryStage.show();
     }
