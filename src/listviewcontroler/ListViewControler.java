@@ -24,6 +24,7 @@ public class ListViewControler
 {
     private ListView listView;
     private TextArea textAreaInformation;
+    private ArrayList<IncidenceObject> arrayList;
 
     public ListViewControler(ListView listView, TextArea textAreaInformation)
     {
@@ -34,7 +35,13 @@ public class ListViewControler
     public void setListView(ArrayList arrayList)
     {
 
-        ObservableList observableList = convertArrayListToObservableList(sortByDelay("ASC",arrayList));//Create ObservableList because I need it for ListView else can not:( maybe...
+        textAreaInformation.setText(null);//Clear the text area for new information
+
+        arrayList = sortByDelay("ASC",arrayList);
+
+        this.arrayList = arrayList;
+
+        ObservableList observableList = convertArrayListToObservableList(arrayList);//Create ObservableList because I need it for ListView else can not:( maybe...
 
         listView.setItems(observableList);
 
@@ -50,6 +57,7 @@ public class ListViewControler
                 }
             }
         });
+
         setSelectItemListener(listView,textAreaInformation);
     }
 
@@ -100,5 +108,18 @@ public class ListViewControler
     private void setSelectItemListener(ListView listView, TextArea textAreaInformation)
     {
         listView.getSelectionModel().selectedItemProperty().addListener(new listviewcontroler.ChangeListener(textAreaInformation));//Here we pass param as TextArea for printing inf
+    }
+
+    public void selectItemByIdIncidence(String id)
+    {
+        for(int i = 0; i < arrayList.size(); i++)
+        {
+            IncidenceObject incidenceObject = arrayList.get(i);
+            if(incidenceObject.get_id().equals(id))
+            {
+                listView.getSelectionModel().select(i);
+            }
+
+        }
     }
 }

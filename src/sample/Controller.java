@@ -45,8 +45,9 @@ public class Controller
        fileReader = new FileReader(stage);
        jsonFile = new JSONFile();
        arrayIncidensJSON = new ArrayIncidensJSON();
-       mapControl = new MapControl(map);//I pass argument as map, I mean I pass my map to mapControl
        listViewControler = new ListViewControler(list_incidence,textAreaInformation);
+       mapControl = new MapControl(map,listViewControler);//I pass argument as map, I mean I pass my map to mapControl
+
 
 
         btnTest.setOnAction(event ->
@@ -55,7 +56,6 @@ public class Controller
             JSONArray jsonArray = jsonFile.getJSONArray(file);//Here I get JSON array from FileReader
             ArrayList<IncidenceObject> inc  = arrayIncidensJSON.getArrayListIncidence(jsonArray);//Here I get ArrayList from jsonArray
             listViewControler.setListView(inc);//Setting listview and textArea for information
-            map.getChildren().clear();
             mapControl.addPoints(inc);//Here I get all points on map(image)
 
         });//for test

@@ -6,17 +6,27 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
+import listviewcontroler.ChangeListener;
+import listviewcontroler.ListViewControler;
 
 import java.util.ArrayList;
 
 public class MapControl
 {
-    private Pane map;
+    private static final int RADIUS_POINT = 7;
+    private static final int RADIUS_BACKGROUND_POINT = 15;
 
-    public MapControl(Pane map)
+    private Pane map;
+    private ClickerOnPoint clickerOnPoint;
+
+    public MapControl(Pane map, ListViewControler listViewControler)
     {
         this.map = map;
-        map.addEventFilter(MouseEvent.MOUSE_PRESSED, new EventHandler<MouseEvent>() {
+
+        clickerOnPoint = new ClickerOnPoint(listViewControler);
+
+
+        map.addEventFilter(MouseEvent.MOUSE_PRESSED, new EventHandler<MouseEvent>() {//This is for test
             @Override
             public void handle(MouseEvent mouseEvent) {
                 System.out.println("X:" + mouseEvent.getX()+" Y:"+mouseEvent.getY() );
@@ -26,16 +36,14 @@ public class MapControl
 
     public void addPoints(ArrayList<IncidenceObject> incidenceObjects)
     {
+        map.getChildren().clear();//Just clear map for new adding points
+
         for(IncidenceObject o : incidenceObjects)
-        {
             addPoint(o);
-        }
     }
 
     public void addPoint(IncidenceObject incidenceObject)
     {
-        Circle point = new Circle();
-        Circle backgroudPoint = new Circle();
 
         int typeOfIncident = incidenceObject.get_type();//Type of Incident
 
@@ -53,18 +61,44 @@ public class MapControl
         System.out.print(X+" ");
         System.out.println(Y);*/
 
-        point.setCenterX(points[0]);
-        point.setCenterY(points[1]);
+       points = convertGoordsMapToSimple(points);//Convert coordinates from Map to simple coordinates
 
-        point.setRadius(5);
-        point.setFill(getColorOfTypeIncidence(typeOfIncident));
+       Circle point = getPointByCoorditanes(points,typeOfIncident,incidenceObject.get_id());//Here I just get circule object. I pass coords type of incidence and id
 
-        backgroudPoint.setFill(getColorTransperentOfIncidence(typeOfIncident,0.3));
-        backgroudPoint.setCenterX(points[0]);
-        backgroudPoint.setCenterY(points[1]);
-        backgroudPoint.setRadius(15);
-        map.getChildren().add(point);
+       Circle backgroudPoint = getBackgroundPointByCoorditanes(points,typeOfIncident,0.3);
+
+       point.setOnMouseClicked(clickerOnPoint);
+
+
         map.getChildren().add(backgroudPoint);
+        map.getChildren().add(point);
+    }
+
+    private Circle getPointByCoorditanes(final double[] coords,final int incidence,final String id)
+    {
+        Circle point = new Circle();
+        point.setId(id);
+        point.setCenterX(coords[0]);//Set coordiantes of point on map
+        point.setCenterY(coords[1]);
+        point.setRadius(RADIUS_POINT);
+        point.setFill(getColorOfTypeIncidence(incidence));//fill color, but color depends type of incidence
+        return point;
+    }
+
+    private Circle getBackgroundPointByCoorditanes(final double[] coords,final int incidence,double opacity)
+    {
+        Circle point = new Circle();
+        point.setCenterX(coords[0]);//Set coordiantes of point on map
+        point.setCenterY(coords[1]);
+        point.setRadius(RADIUS_BACKGROUND_POINT);
+        point.setFill(getColorTransperentOfIncidence(incidence,opacity));//fill color, but color depends type of incidence
+        return point;
+    }
+
+    //----------------------------------- I MUST IMPLEMENTS THIS FUNCTION-------------------------------------
+    private double[] convertGoordsMapToSimple(double[] coords)
+    {
+        return coords;
     }
 
     private Color getColorOfTypeIncidence(int type)

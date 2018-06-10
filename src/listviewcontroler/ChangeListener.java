@@ -15,10 +15,13 @@ public class ChangeListener implements javafx.beans.value.ChangeListener {
     @Override
     public void changed(ObservableValue observable, Object oldValue, Object newValue) {
         printIncidenceInformation((IncidenceObject)newValue,textAreaInformation);
+
     }
 
     public void printIncidenceInformation(IncidenceObject incidenceObject,TextArea textAreaInformation)
     {
+        if(incidenceObject == null) return;//I dont know why I did it, but without it I get NuulPointException! But program works ofter error
+
         textAreaInformation.setText(String.format("Id: %s\nType:%s\nFrom:%s\nTo:%s\nMagnitude:%s\nDelay:%s",
                 incidenceObject.get_id(),
                 getType(incidenceObject.get_type()),
@@ -33,9 +36,9 @@ public class ChangeListener implements javafx.beans.value.ChangeListener {
     {
         switch (type)
         {
-            case 0:return "Jam";
-            case 1:return "Dangerous conditions";
-            case 2:return "Lane closed";
+            case 1:return "Jam";
+            case 2:return "Dangerous conditions";
+            case 3:return "Lane closed";
             default: return null;
         }
     }
