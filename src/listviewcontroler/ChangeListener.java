@@ -3,22 +3,26 @@ package listviewcontroler;
 import incidence.IncidenceObject;
 import javafx.beans.value.ObservableValue;
 import javafx.scene.control.TextArea;
+import map.MapControl;
 
 public class ChangeListener implements javafx.beans.value.ChangeListener {
 
     private TextArea textAreaInformation;
+    private MapControl mapControl;
 
-    public ChangeListener(TextArea textAreaInformation)
+    public ChangeListener(TextArea textAreaInformation, MapControl mapControl)
     {
         this.textAreaInformation = textAreaInformation;
+        this.mapControl = mapControl;
     }
     @Override
     public void changed(ObservableValue observable, Object oldValue, Object newValue) {
         printIncidenceInformation((IncidenceObject)newValue,textAreaInformation);
+        mapControl.clickOnPoint((IncidenceObject)newValue);
 
     }
 
-    public void printIncidenceInformation(IncidenceObject incidenceObject,TextArea textAreaInformation)
+    public void printIncidenceInformation(IncidenceObject incidenceObject, TextArea textAreaInformation)
     {
         if(incidenceObject == null) return;//I dont know why I did it, but without it I get NuulPointException! But program works ofter error
 

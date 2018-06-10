@@ -1,16 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="700" maxWidth="1250" minHeight="700" minWidth="1250" prefHeight="700" prefWidth="1250" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
-      <Button fx:id="btnTest" layoutX="1041.0" layoutY="661.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="175.0" text="Read JSON" />
+      <Button fx:id="btnJson" layoutX="1041.0" layoutY="661.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="175.0" text="Read JSON file" />
+      <Button fx:id="btnUrlJson" layoutX="1041.0" layoutY="629.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="175.0" text="Read URL JSON" />
       <ListView fx:id="list_incidence" layoutX="1020.0" layoutY="1.0" prefHeight="350.0" prefWidth="229.0" />
       <Pane fx:id="map" layoutY="-2.0" prefHeight="700.0" prefWidth="1019.0" />
-      <TextArea layoutX="1019.0" layoutY="358.0" prefHeight="299.0" prefWidth="229.0" fx:id="textAreaInformation"/>
+      <ImageView fx:id="image_error" fitHeight="50" fitWidth="60" layoutX="950" layoutY="10" visible="false">
+         <image>
+            <Image url="@dangerous_icon_13.png" />
+         </image></ImageView>
+      <TextArea fx:id="textAreaInformation" layoutX="1019.0" layoutY="358.0" prefHeight="138.0" prefWidth="229.0" />
+      <Circle fill="#ebca2869" layoutX="1041.0" layoutY="518.0" radius="16.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+      <Circle fill="#f8910a" layoutX="1041.0" layoutY="518.0" radius="7.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+      <Circle fill="#ff000069" layoutX="1041.0" layoutY="597.0" radius="16.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+      <Circle fill="RED" layoutX="1041.0" layoutY="597.0" radius="7.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+      <Circle fill="#6500ff69" layoutX="1041.0" layoutY="557.0" radius="16.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+      <Circle fill="#4f00ff" layoutX="1041.0" layoutY="557.0" radius="7.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+      <Label layoutX="1067.0" layoutY="508.0" prefHeight="17.0" prefWidth="68.0" text="- Jam">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="1067.0" layoutY="542.0" prefHeight="30.0" prefWidth="175.0" text="- Dangerousc onditions">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="1067.0" layoutY="582.0" prefHeight="30.0" prefWidth="175.0" text="- Lane closed">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+
    </children>
 </AnchorPane>

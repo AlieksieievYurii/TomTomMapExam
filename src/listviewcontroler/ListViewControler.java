@@ -6,6 +6,7 @@ import javafx.collections.ObservableList;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
+import map.MapControl;
 
 import java.util.ArrayList;
 
@@ -24,6 +25,7 @@ public class ListViewControler
 {
     private ListView listView;
     private TextArea textAreaInformation;
+    private MapControl mapControl;
     private ArrayList<IncidenceObject> arrayList;
 
     public ListViewControler(ListView listView, TextArea textAreaInformation)
@@ -31,6 +33,12 @@ public class ListViewControler
         this.listView = listView;
         this.textAreaInformation = textAreaInformation;
     }
+
+    public void setMapController(MapControl mapControl)
+    {
+        this.mapControl = mapControl;
+    }
+
 
     public void setListView(ArrayList arrayList)
     {
@@ -107,7 +115,7 @@ public class ListViewControler
 
     private void setSelectItemListener(ListView listView, TextArea textAreaInformation)
     {
-        listView.getSelectionModel().selectedItemProperty().addListener(new listviewcontroler.ChangeListener(textAreaInformation));//Here we pass param as TextArea for printing inf
+        listView.getSelectionModel().selectedItemProperty().addListener(new listviewcontroler.ChangeListener(textAreaInformation,mapControl));//Here we pass param as TextArea for printing inf
     }
 
     public void selectItemByIdIncidence(String id)

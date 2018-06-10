@@ -24,12 +24,14 @@ public class FileReader
         try
         {
              fileReader = new java.io.FileReader(file);//get FileReader for parse json
-        } catch (Exception e) {e.printStackTrace();}
+        } catch (Exception e) {
+            System.out.println("File is not choised!");
+        }
 
         return fileReader;
     }
 
-    public File getFile()//Function returns File
+    private File getFile()//Function returns File
     {
         FileChooser fileChooser = new FileChooser();
 

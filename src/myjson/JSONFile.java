@@ -21,4 +21,19 @@ public class JSONFile
 
         return jsonArray;
     }
+
+    public JSONArray getJSONArray(String textJson)//This function returns JSON array from FileReader
+    {
+        JSONParser jsonParser = new JSONParser();
+        JSONArray jsonArray = null;
+
+        try
+        {
+            Object object = jsonParser.parse(textJson);
+            jsonArray = (JSONArray) object;
+
+        }catch (Exception e) {e.printStackTrace();}
+
+        return jsonArray;
+    }
 }
