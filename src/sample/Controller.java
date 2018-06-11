@@ -76,6 +76,10 @@ public class Controller
 
             if(timeline != null)timeline.stop();//Here I stop procces of query when click button read from file
 
+            imageDangerous.stopError();//I did it for stoping error when I change mode of read json file. For example:
+            //First I chose URL read Mode and write wrong url, so start error(Bling of image dangerous).
+            //If I choose mode ReadFileJson ofter ReadURLJson, I stop imageDangerous
+
             runProcces(TextFromJson.getTextFromFileReader(file));
 
         });
@@ -91,12 +95,15 @@ public class Controller
             runProcces(getJSONfile(getFileFromURL));
 
             timeline = new Timeline(new KeyFrame((Duration.seconds(TIME_OF_QUERY_URL*60)), ev ->
-                    runProcces(getJSONfile(getFileFromURL))));
-
+            {
+                runProcces(getJSONfile(getFileFromURL));
+            }));
 
             timeline.setCycleCount(Animation.INDEFINITE);
             timeline.play();
+
         });
+
 
         setStyleForPane();
     }
@@ -114,7 +121,7 @@ public class Controller
         return textJson;
     }
 
-    public void runProcces(String textJson)
+    private void runProcces(String textJson)
     {
         if(textJson == null) return;//If it null I just stop work
 

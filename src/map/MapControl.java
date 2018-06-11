@@ -1,6 +1,10 @@
 package map;
 
 import incidence.IncidenceObject;
+import javafx.event.EventHandler;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import listviewcontroler.ListViewControler;
 
@@ -15,6 +19,15 @@ public class MapControl
     {
         this.map = map;
         clickerOnPoint = new ClickerOnPoint(listViewControler,map);
+
+        map.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                System.out.println("X:" + event.getX()+" Y:"+event.getY());
+            }
+        });
+
+        map.setFocusTraversable(true);
     }
 
     public void addPoints(ArrayList<IncidenceObject> incidenceObjects)
@@ -82,9 +95,18 @@ public class MapControl
     }
 
     //----------------------------------- I MUST IMPLEMENTS THIS FUNCTION-------------------------------------
-    private double[] convertGoordsMapToSimple(double[] coords)
+    private double[] convertGoordsMapToSimple(double[] points)
     {
-        return coords;
+        System.out.println("1:"+points[0]);
+        System.out.println("2:"+points[1]);
+
+        double x = (points[0] - 12.943025);
+        double y = (52.646326 - points[1]);
+
+        points[0] = x * 950;
+        points[1] = y * 2110;
+
+        return points;
     }
 
 }
