@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="MapTomTom:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/MapTomTom_jar</output-path>
+    <root id="archive" name="MapTomTom.jar">
+      <element id="module-output" name="MapTomTom" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/json-simple-1.1.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
