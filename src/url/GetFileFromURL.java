@@ -23,7 +23,7 @@ public class GetFileFromURL
 
         }catch (IOException ex)
         {
-            System.out.println("Error of opening url!");
+            System.out.println("Error of opening url:" + urlPath);
             return null;
         }
         return scanner;
