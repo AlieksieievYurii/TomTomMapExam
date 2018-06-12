@@ -38,6 +38,8 @@ public class Controller
     private ListViewControler listViewControler;//This class is for add to ListView elemetns and control them
     private Timeline timeline = null;
     private ImageDangerous imageDangerous;
+    private JSONArray jsonArray;
+    private ArrayList<IncidenceObject> inc;
 
     @FXML
     public Button btnJson;
@@ -65,8 +67,10 @@ public class Controller
         arrayIncidensJSON = new ArrayIncidensJSON();
         listViewControler = new ListViewControler(list_incidence,textAreaInformation);
         mapControl = new MapControl(map,listViewControler);//I pass argument as map, I mean I pass my map to mapControl
+
         listViewControler.setMapController(mapControl);//Here I pass mapController as argument
         imageDangerous = new ImageDangerous(image_error);
+
 
         btnJson.setOnAction(event ->
         {
@@ -86,6 +90,8 @@ public class Controller
 
         btnUrlJson.setOnAction(event ->
         {
+            if(timeline != null)timeline.stop();
+
             String url = GetURL.getURL();
 
             if(url == null) return;
@@ -95,15 +101,12 @@ public class Controller
             runProcces(getJSONfile(getFileFromURL));
 
             timeline = new Timeline(new KeyFrame((Duration.seconds(TIME_OF_QUERY_URL*60)), ev ->
-            {
-                runProcces(getJSONfile(getFileFromURL));
-            }));
+                    runProcces(getJSONfile(getFileFromURL))));
 
             timeline.setCycleCount(Animation.INDEFINITE);
             timeline.play();
 
         });
-
 
         setStyleForPane();
     }
@@ -125,8 +128,8 @@ public class Controller
     {
         if(textJson == null) return;//If it null I just stop work
 
-        JSONArray jsonArray = jsonFile.getJSONArray(textJson);//Here I get JSON array from FileReader
-        ArrayList<IncidenceObject> inc  = arrayIncidensJSON.getArrayListIncidence(jsonArray);//Here I get ArrayList from jsonArray
+        jsonArray = jsonFile.getJSONArray(textJson);//Here I get JSON array from FileReader
+        inc  = arrayIncidensJSON.getArrayListIncidence(jsonArray);//Here I get ArrayList from jsonArray
         listViewControler.setListView(inc);//Setting listview and textArea for information
         mapControl.addPoints(inc);//Here I get all points on map(image)
     }
@@ -141,5 +144,6 @@ public class Controller
     public void setStage(Stage stage)
     {
         this.stage = stage;
+        mapControl.setStage(stage);
     }
 }

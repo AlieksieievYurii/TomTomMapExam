@@ -69,8 +69,14 @@ public class ListViewControler
         setSelectItemListener(listView,textAreaInformation);
     }
 
-    private ArrayList<IncidenceObject> sortByDelay(String orderBy, ArrayList<IncidenceObject> arrayList)//This method sort has two mode of sort ASC & DESC
+    public ArrayList<IncidenceObject> getArrayList()
     {
+        return arrayList;
+    }
+
+    private ArrayList<IncidenceObject> sortByDelay(String orderBy, ArrayList<IncidenceObject> arrayList)//This method sort has two mode of sort ASC & DESC
+    {//I use Bubble Sort for fun:)))))
+
         for(int i = 0; i < arrayList.size(); i++)
         {
             for(int k = 0; k < arrayList.size()-1; k++)

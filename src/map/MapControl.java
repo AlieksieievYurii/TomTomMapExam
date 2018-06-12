@@ -2,30 +2,30 @@ package map;
 
 import incidence.IncidenceObject;
 import javafx.event.EventHandler;
+import javafx.scene.Node;
+import javafx.scene.control.Tooltip;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
+import javafx.scene.shape.Circle;
+import javafx.stage.Stage;
 import listviewcontroler.ListViewControler;
 
 import java.util.ArrayList;
+import java.util.concurrent.TimeUnit;
 
 public class MapControl
 {
     private Pane map;
     private ClickerOnPoint clickerOnPoint;
+    private MouseEntered mouseEntered;
 
     public MapControl(Pane map, ListViewControler listViewControler)
     {
         this.map = map;
+        mouseEntered = new MouseEntered(listViewControler);
         clickerOnPoint = new ClickerOnPoint(listViewControler,map);
-
-        map.setOnMouseClicked(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent event) {
-                System.out.println("X:" + event.getX()+" Y:"+event.getY());
-            }
-        });
 
         map.setFocusTraversable(true);
     }
@@ -38,27 +38,6 @@ public class MapControl
             addPoint(o);
     }
 
-    /*public void addPointTEst(IncidenceObject incidenceObject)
-    {
-
-        int typeOfIncident = incidenceObject.get_type();//Type of Incident
-
-        double[] points = incidenceObject.get_points();
-
-       *//* String x = String.valueOf(points[0]);
-        x = x.substring(x.indexOf(".")).substring(1);
-
-        String y = String.valueOf(points[1]);
-        y = y.substring(y.indexOf(".")).substring(1);
-
-        int X = Integer.parseInt(x);
-        int Y = Integer.parseInt(y);
-
-        System.out.print(X+" ");
-        System.out.println(Y);*//*
-
-    }*/
-
     private void addPoint(IncidenceObject incidenceObject)
     {
         double[] cord = incidenceObject.get_points();
@@ -69,6 +48,8 @@ public class MapControl
         CirculePoint circulePoint = new CirculePoint(cord,incidence,incidenceObject.get_id());
 
         circulePoint.setOnMouseClicked(clickerOnPoint);
+        circulePoint.setOnMouseEntered(mouseEntered);
+        circulePoint.setOnMouseExited(mouseEntered.getMouseExtited());
 
         map.getChildren().add(circulePoint);
     }
@@ -95,11 +76,8 @@ public class MapControl
     }
 
     //----------------------------------- I MUST IMPLEMENTS THIS FUNCTION-------------------------------------
-    private double[] convertGoordsMapToSimple(double[] points)
+    private double[] convertGoordsMapToSimple(double[] points)//This function converts coordinates from Map to simple coordinates for Pane
     {
-        System.out.println("1:"+points[0]);
-        System.out.println("2:"+points[1]);
-
         double x = (points[0] - 12.943025);
         double y = (52.646326 - points[1]);
 
@@ -109,4 +87,8 @@ public class MapControl
         return points;
     }
 
+    public void setStage(Stage stage)
+    {
+        mouseEntered.setStage(stage);
+    }
 }

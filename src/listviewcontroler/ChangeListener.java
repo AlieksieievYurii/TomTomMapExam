@@ -36,7 +36,7 @@ public class ChangeListener implements javafx.beans.value.ChangeListener {
         );
     }
 
-    private String getType(int type)
+    public static String getType(int type)
     {
         switch (type)
         {
@@ -47,7 +47,7 @@ public class ChangeListener implements javafx.beans.value.ChangeListener {
         }
     }
 
-    private String getMagnitude(int magnitude)
+    public static String getMagnitude(int magnitude)
     {
         switch (magnitude)
         {
