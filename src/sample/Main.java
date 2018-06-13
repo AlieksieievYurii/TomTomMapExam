@@ -20,7 +20,7 @@ public class Main extends Application {
         controller.setStage(primaryStage);
 
 
-        primaryStage.setTitle("Map");
+        primaryStage.setTitle("TTmap");
         primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("logo.png")));
         primaryStage.setResizable(false);
 

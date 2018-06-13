@@ -28,7 +28,7 @@ import java.util.ArrayList;
 public class Controller
 {
 
-    private static final int TIME_OF_QUERY_URL = 1;//Im minutes
+    private static final int TIME_OF_QUERY_URL = 2;//Im minutes
 
     private Stage stage;
     private FileReader fileReader;//This is my custom class for getting FileReader
