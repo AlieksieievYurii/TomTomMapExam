@@ -75,7 +75,6 @@ public class MapControl
         }
     }
 
-    //----------------------------------- I MUST IMPLEMENTS THIS FUNCTION-------------------------------------
     private double[] convertGoordsMapToSimple(double[] points)//This function converts coordinates from Map to simple coordinates for Pane
     {
         double x = (points[0] - 12.943025);

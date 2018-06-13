@@ -17,10 +17,13 @@ public class MouseEntered implements EventHandler<MouseEvent>
     private Stage stage;
     private Tooltip tooltip;
 
+    private MouseExited mouseExited;
+
     public MouseEntered(ListViewControler listViewControler)
     {
         this.listViewControler = listViewControler;
         tooltip = new Tooltip();
+        mouseExited = new MouseExited();
     }
 
     @Override
@@ -69,7 +72,7 @@ public class MouseEntered implements EventHandler<MouseEvent>
 
     public MouseExited getMouseExtited()
     {
-        return new MouseExited();
+        return mouseExited;
     }
 
     public class MouseExited implements EventHandler<MouseEvent>

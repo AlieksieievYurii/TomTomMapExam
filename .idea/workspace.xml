@@ -7,20 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="&quot;10.06.2018&quot;">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/map/MouseEntered.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/production/MapTomTom/listviewcontroler/ChangeListener.class" afterPath="$PROJECT_DIR$/out/production/MapTomTom/listviewcontroler/ChangeListener.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/MapTomTom/listviewcontroler/ListViewControler.class" afterPath="$PROJECT_DIR$/out/production/MapTomTom/listviewcontroler/ListViewControler.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/MapTomTom/map/MapControl$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/MapTomTom/map/MapControl.class" afterPath="$PROJECT_DIR$/out/production/MapTomTom/map/MapControl.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/MapTomTom/sample/Controller.class" afterPath="$PROJECT_DIR$/out/production/MapTomTom/sample/Controller.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/MapTomTom/sample/Main.class" afterPath="$PROJECT_DIR$/out/production/MapTomTom/sample/Main.class" />
-      <change beforePath="$PROJECT_DIR$/src/listviewcontroler/ChangeListener.java" afterPath="$PROJECT_DIR$/src/listviewcontroler/ChangeListener.java" />
-      <change beforePath="$PROJECT_DIR$/src/listviewcontroler/ListViewControler.java" afterPath="$PROJECT_DIR$/src/listviewcontroler/ListViewControler.java" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/MapTomTom_jar/MapTomTom.jar" afterPath="$PROJECT_DIR$/out/artifacts/MapTomTom_jar/MapTomTom.jar" />
       <change beforePath="$PROJECT_DIR$/src/map/MapControl.java" afterPath="$PROJECT_DIR$/src/map/MapControl.java" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Controller.java" afterPath="$PROJECT_DIR$/src/sample/Controller.java" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Main.java" afterPath="$PROJECT_DIR$/src/sample/Main.java" />
-      <change beforePath="$PROJECT_DIR$/src/url/GetURL.java" afterPath="$PROJECT_DIR$/src/url/GetURL.java" />
+      <change beforePath="$PROJECT_DIR$/src/map/MouseEntered.java" afterPath="$PROJECT_DIR$/src/map/MouseEntered.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -83,11 +73,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="40" column="15" lean-forward="false" selection-start-line="40" selection-start-column="15" selection-end-line="40" selection-end-column="15" />
+            <state relative-caret-position="0">
+              <caret line="46" column="9" lean-forward="false" selection-start-line="46" selection-start-column="9" selection-end-line="46" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2428#3074#0" expanded="false" />
@@ -95,6 +85,35 @@
                 <element signature="method#getJSONfile#0;class#Controller#0" expanded="false" />
                 <element signature="method#setStyleForPane#0;class#Controller#0" expanded="false" />
                 <element signature="method#setStage#0;class#Controller#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MapControl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/map/MapControl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+              <folding>
+                <element signature="method#MapControl#0;class#MapControl#0" expanded="false" />
+                <element signature="method#addPoints#0;class#MapControl#0" expanded="false" />
+                <element signature="method#addPoint#0;class#MapControl#0" expanded="false" />
+                <element signature="method#clickOnPoint#0;class#MapControl#0" expanded="false" />
+                <element signature="method#convertGoordsMapToSimple#0;class#MapControl#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MouseEntered.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/map/MouseEntered.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="8">
+              <caret line="29" column="2" lean-forward="false" selection-start-line="29" selection-start-column="2" selection-end-line="29" selection-end-column="2" />
+              <folding>
+                <element signature="e#2218#2219#0" expanded="true" />
+                <element signature="e#2252#2253#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -143,11 +162,11 @@
         <option value="$PROJECT_DIR$/src/listviewcontroler/ListViewControler.java" />
         <option value="$PROJECT_DIR$/src/map/CirculePoint.java" />
         <option value="$PROJECT_DIR$/src/listviewcontroler/ChangeListener.java" />
-        <option value="$PROJECT_DIR$/src/map/MapControl.java" />
-        <option value="$PROJECT_DIR$/src/map/MouseEntered.java" />
         <option value="$PROJECT_DIR$/src/freader/FileReader.java" />
         <option value="$PROJECT_DIR$/src/url/GetURL.java" />
         <option value="$PROJECT_DIR$/src/sample/Controller.java" />
+        <option value="$PROJECT_DIR$/src/map/MapControl.java" />
+        <option value="$PROJECT_DIR$/src/map/MouseEntered.java" />
       </list>
     </option>
   </component>
@@ -158,7 +177,7 @@
     </treeState>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-136" />
     <option name="y" value="80" />
     <option name="width" value="1300" />
@@ -184,7 +203,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="Scratches">
         <subPane>
           <expand>
@@ -196,6 +214,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -213,7 +232,7 @@
               <item name="MapTomTom" type="b2602c69:ProjectViewProjectNode" />
               <item name="MapTomTom" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sample" type="462c0819:PsiDirectoryNode" />
+              <item name="map" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MapTomTom" type="b2602c69:ProjectViewProjectNode" />
@@ -237,7 +256,7 @@
     <property name="dynamic.classpath" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="project.structure.last.edited" value="Artifacts" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
@@ -399,7 +418,7 @@
     <option name="totallyTimeSpent" value="1302000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1296" height="786" extended-state="6" />
+    <frame x="-8" y="-8" width="1296" height="786" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -410,12 +429,12 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3203593" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928804" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31490016" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31490016" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32872504" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20873787" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21521036" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -483,7 +502,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="11" />
+      <option name="time" value="12" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -513,8 +532,6 @@
             <element signature="method#addPoint#0;class#MapControl#0" expanded="false" />
             <element signature="method#clickOnPoint#0;class#MapControl#0" expanded="false" />
             <element signature="method#convertGoordsMapToSimple#0;class#MapControl#0" expanded="false" />
-            <element signature="e#2669#2670#0" expanded="true" />
-            <element signature="e#2713#2714#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -660,7 +677,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="15" column="37" lean-forward="false" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -708,7 +724,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="15" column="37" lean-forward="true" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -871,7 +886,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="731">
           <caret line="51" column="11" lean-forward="false" selection-start-line="51" selection-start-column="4" selection-end-line="51" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -879,7 +893,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="226">
           <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -887,7 +900,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="44" column="9" lean-forward="false" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -895,7 +907,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="166">
           <caret line="19" column="42" lean-forward="false" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -907,37 +918,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/freader/FileReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="35" column="52" lean-forward="false" selection-start-line="35" selection-start-column="52" selection-end-line="35" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/url/GetURL.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
           <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/map/MouseEntered.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="29" column="39" lean-forward="false" selection-start-line="29" selection-start-column="39" selection-end-line="29" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#getTextForTooltip#0;class#MouseEntered#0" expanded="false" />
-            <element signature="method#getIncidenceObjectById#0;class#MouseEntered#0" expanded="false" />
-            <element signature="e#2139#2140#0" expanded="true" />
-            <element signature="e#2179#2180#0" expanded="true" />
-            <element signature="e#2324#2325#0" expanded="true" />
-            <element signature="e#2362#2363#0" expanded="true" />
-            <element signature="e#2413#2414#0" expanded="true" />
-            <element signature="e#2447#2448#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -945,30 +929,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/map/MapControl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="20" column="40" lean-forward="true" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
-          <folding>
-            <element signature="method#MapControl#0;class#MapControl#0" expanded="false" />
-            <element signature="method#addPoints#0;class#MapControl#0" expanded="false" />
-            <element signature="method#addPoint#0;class#MapControl#0" expanded="false" />
-            <element signature="method#clickOnPoint#0;class#MapControl#0" expanded="false" />
-            <element signature="method#convertGoordsMapToSimple#0;class#MapControl#0" expanded="false" />
-            <element signature="e#2669#2670#0" expanded="true" />
-            <element signature="e#2713#2714#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="40" column="15" lean-forward="false" selection-start-line="40" selection-start-column="15" selection-end-line="40" selection-end-column="15" />
+        <state relative-caret-position="0">
+          <caret line="46" column="9" lean-forward="false" selection-start-line="46" selection-start-column="9" selection-end-line="46" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2428#3074#0" expanded="false" />
@@ -976,6 +943,39 @@
             <element signature="method#getJSONfile#0;class#Controller#0" expanded="false" />
             <element signature="method#setStyleForPane#0;class#Controller#0" expanded="false" />
             <element signature="method#setStage#0;class#Controller#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/freader/FileReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="35" column="52" lean-forward="false" selection-start-line="35" selection-start-column="52" selection-end-line="35" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/map/MapControl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+          <folding>
+            <element signature="method#MapControl#0;class#MapControl#0" expanded="false" />
+            <element signature="method#addPoints#0;class#MapControl#0" expanded="false" />
+            <element signature="method#addPoint#0;class#MapControl#0" expanded="false" />
+            <element signature="method#clickOnPoint#0;class#MapControl#0" expanded="false" />
+            <element signature="method#convertGoordsMapToSimple#0;class#MapControl#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/map/MouseEntered.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8">
+          <caret line="29" column="2" lean-forward="false" selection-start-line="29" selection-start-column="2" selection-end-line="29" selection-end-column="2" />
+          <folding>
+            <element signature="e#2218#2219#0" expanded="true" />
+            <element signature="e#2252#2253#0" expanded="true" />
           </folding>
         </state>
       </provider>
