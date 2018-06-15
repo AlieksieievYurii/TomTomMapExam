@@ -27,3 +27,5 @@ in array list. Also print important information on display. It works conversely.
 Also you can just put cursor on point and get information about it as hint.
 
 The program does every two minutes query from server by URL.
+
+The Jar file is in:TomTomMapExam/out/artifacts/MapTomTom_jar
